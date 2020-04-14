@@ -8,6 +8,7 @@ class ConnectionSingleton:
     
     def __new__(cls):
         if cls.__instance == None:
+            print("Connecting (Should only happen once)")
             cls.__instance = super(ConnectionSingleton, cls).__new__(cls)
         return cls.__instance
 
